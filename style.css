@@ -1,0 +1,196 @@
+body{
+    height:100vh;
+    margin:0;
+    width:100vw;
+    display: grid;
+    grid-template-rows:110px 80px 1fr;
+}
+
+.add{
+    grid-area: 2/1/3/2;
+    align-self: center;
+    margin-left:40px;
+}
+
+.grid{
+    grid-row-start:3;
+    grid-column-end: 2;
+    margin-left: 100px;
+}
+
+*{
+    font-family: 'Droid Sans',serif;
+}
+
+.warn{
+    margin-left:40px;
+}
+
+.card div{
+    background-color: #fff;
+    height: 35px;
+    width: 240px;
+    margin-bottom: 50px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    padding-left: 10px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.card input{
+    margin-right: 20px;
+    display: block;
+    margin-bottom: 35px;
+}
+
+.checkbox{
+    display: flex;
+    gap:20px;
+}
+.status{
+    display: grid;
+    gap:5px;
+    align-items: center;
+    grid-template-columns: 140px 10px;
+}
+
+.checkbox input{
+    height: 20px;
+    width: 20px;
+    margin:0;
+}
+
+#myForm button{
+    all:unset;
+    height:50px;
+    width:110px;
+    display: flex;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color: orangered;
+    box-sizing: border-box;
+
+}
+
+#myForm button:hover,#add:hover,.card button:hover{
+    border:solid 1px white;
+}
+
+.card{
+    padding:20px;
+    padding-top:40px;
+    padding-left: 33px;
+    background-color: #d9f99d;
+    height:460px;
+    border: solid 10px #65a30d;
+    border-style: ridge;
+    box-sizing: border-box;
+}
+
+.grid{
+    display: grid;
+    padding-bottom: 180px;
+    grid-template-rows: 460px;
+    width:90vw;
+    justify-content: start;
+    grid-template-columns: repeat(auto-fit,minmax(330px,30%));
+    gap:50px;
+    margin-bottom:200px;
+
+}
+
+#myForm input[type="checkbox"]{
+    width:20px;
+}
+
+button[type="submit"]{
+    width:100px;
+}
+.formAndWarn{
+    position: absolute;
+    bottom:200px;
+    left:300px;
+    z-index: 1;
+    visibility: hidden;
+    border: solid 3px #f97316;
+    border-radius: 15px;
+    padding:20px;
+    padding-left:20px;
+    font-weight: bold;
+    font-size:20px;
+    color:black;
+    background-color:#fed7aa;
+
+}
+
+.formAndWarn.show{
+    visibility: visible;
+}
+
+.add button,.remove{
+    all:unset; 
+    height:50px;
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    width:140px;
+    background-color: #4f46e5;
+    color:white;
+}
+
+.remove{
+    width:190px;
+    background-color: #65a30d;
+}
+
+#myForm{
+    align-items: center;
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: 100px 100px;
+    padding-left: 40px;
+}
+#myForm input{
+    height:20px;
+    width:200px;
+}
+.title{
+    grid-area:1/1/2/2;
+    
+}
+.author{
+    grid-area: 1/2/2/3;
+}
+
+.pages{
+    grid-area: 2/1/3/2;
+}
+
+.status{
+    grid-area: 2/2/3/3;
+}
+
+.outline{
+    text-shadow:0 1px 0.5px #000, 0 -1px 0.5px #000, 1px 0 0.5px #000, -1px 0 0.5px #000;
+}
+.heading{
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100vw;
+    margin:0;
+    font-weight: bold;
+    height:110px;
+    top:0px;
+    font-size: 70px;
+    color:#fff;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odin-Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+     href="https://fonts.googleapis.com/css?family=Tangerine|Roboto|Droid+Sans">
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <div class="outline heading">Odin Library</div>
+    <div class="add"><button id="add">Add book</button></div>
+    <div class="formAndWarn">
+        <form action="index.html" id="myForm" method="post">
+            <div class="title">
+                <div><label for="title">Title</label></div>
+                <input type="text" id="title">
+            </div>
+            <div class="author">
+                <div><label for="author">Author</label></div>
+                <input type="text" id="author">
+            </div>
+            <div class="pages">
+                <label for="pages">No. of pages</label>
+                <input type="text" id="pages">
+            </div>
+            <div class="status">
+                <label for="status">already read?</label>
+                <input type="checkbox" name="check" value="true" id="status">
+                <input type="hidden" name="check" value="false">
+            </div>
+            <button type="submit">submit</button>
+        </form>
+        <div class="warn"></div>
+    </div>
+    <div class="grid">
+    </div>
+</body>
+</html>
