@@ -8,11 +8,13 @@ const formAndWarn = document.querySelector('.formAndWarn');
 const warning = document.querySelector('.warn');
 const grid = document.querySelector('.grid')
 
-function Book(title,author,pages,status) {
-  this.pages = pages;
-  this.author = author;
-  this.title = title;
-  this.status = status;
+class Book {
+    constructor(title,author,pages,status){
+        this.pages = pages;
+        this.author = author;
+        this.title = title;
+        this.status = status;
+    }
 }
 
 function bookExists(book){
@@ -21,6 +23,7 @@ function bookExists(book){
     {
         if(item.title==book)
         {
+            console.log("found")
             found =  true;
             break;
         }
@@ -61,6 +64,7 @@ function makeACard(){
         let remove = document.createElement('button');
         let card = document.createElement('div');
         cardTitle.textContent = currentBook.title;
+        console.log(currentBook);
         cardAuthor.textContent = currentBook.author;
         cardPages.textContent = currentBook.pages;
         let readStatus = currentBook.status;
@@ -107,7 +111,6 @@ formAndWarn.addEventListener('click',(e)=>{
 const checkbox = document.querySelector('#status');
 checkbox.addEventListener('click',()=>{
     currentStatus = !(currentStatus);
-pars
 })
 
 form.addEventListener('submit',(e)=>{
